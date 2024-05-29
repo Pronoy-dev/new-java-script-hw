@@ -1,5 +1,6 @@
 let btn = document.querySelector("button");
 
-btn.addEventListener("click", function () {
-  console.log("click");
-});
+btn.addEventListener(
+  "click",
+  debounce(function () {}, 2000)
+);
