@@ -51,3 +51,5 @@ chain()
   .then((data) => {
     output(data[0].thumbnailUrl);
   });
+
+// promise chaining done
