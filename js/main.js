@@ -35,21 +35,19 @@ function output(item) {
   document.body.appendChild(div);
 }
 
-chain()
-  .then((data) => {
-    return cuttingIteam(data);
-  })
-  .then((cuttingData) => {
-    return cuttingData.splice(0, 11);
-  })
-  .then((elevenIteam) => {
-    filterItem = elevenIteam.filter((item) => {
-      return item.title === "reprehenderit est deserunt velit ipsam";
-    });
-    return filterItem;
-  })
-  .then((data) => {
-    output(data[0].thumbnailUrl);
-  });
-
-// promise chaining done
+// chain()
+//   .then((data) => {
+//     return cuttingIteam(data);
+//   })
+//   .then((cuttingData) => {
+//     return cuttingData.splice(0, 11);
+//   })
+//   .then((elevenIteam) => {
+//     filterItem = elevenIteam.filter((item) => {
+//       return item.title === "reprehenderit est deserunt velit ipsam";
+//     });
+//     return filterItem;
+//   })
+//   .then((data) => {
+//     output(data[0].thumbnailUrl);
+//   });
