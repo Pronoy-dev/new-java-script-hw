@@ -23,7 +23,11 @@ function chain() {
 
 function cuttingIteam(allData) {
   return new Promise((resolve, reject) => {
-    resolve(allData);
+    const cuttingData = allData.splice(0, 10);
+    const filterIteam = cuttingData.filter((item) => {
+      return item.title === "reprehenderit est deserunt velit ipsam";
+    });
+    resolve(filterIteam);
   });
 }
 
@@ -51,3 +55,14 @@ function output(item) {
 //   .then((data) => {
 //     output(data[0].thumbnailUrl);
 //   });
+
+async function callingPromise() {
+  const data = await chain();
+  const cuttingData = await cuttingIteam(data);
+
+  const [item] = cuttingData;
+  console.log(item);
+  output(item.thumbnailUrl);
+}
+
+callingPromise();
